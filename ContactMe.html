@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      background: white;
+      max-width: 600px;
+      padding: 20px 30px;
+      gap:20px;
+      border-radius: 10px;
+      margin:10px;
+     
+      
+      
+    }
+
+    .profile-section img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      flex-shrink:0;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    
+
+    .profile-info p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+
+    }
+
+    .buttons button {
+      background-color: #0066ff;
+      color:white;
+      border: 5px;
+      padding: 8px 16px;
+      margin: 10px;
+      width: 100%;
+      border-radius: 5px;
+      
+    }
+
+    .buttons button:hover {
+      background-color: #0047b3;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .buttons button {
+        margin: 5px;
+        
+      }
+      .buttons{
+        flex-direction: column;
+        align-items: center;
+       
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    
+    <div class="profile-section">
+
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKYAAACUCAMAAAAu5KLjAAAAMFBMVEXk5ueutLersbTn6eq1ur3c3+C4vcDg4+THy83U19nP0tS9wsTX2tvCx8mnrrGyt7qxYFcYAAAEVUlEQVR4nO2c646cMAyFIQYCub7/2zYEpqWzMEPIccJKnF+7UqV+suNcjM82zaNHjx49evTo0S8V0b+f6NM/rKfA1RulRqu1tqNSU9/cDjUATXbwrfin1g96am4ESo2chsD1U8INk7wJKfVjtwu5kPqxvwEoSdseMq6gunZESY7uM+RCOlYFpbAmv0POnN1UkdOeg4yylRjJdAmUIaBVSomMT6GcS8mU5ySVBhlBVWnOK5TlOWm6QhlUlPNaLGe5ghsT9RchZ5Wrd+kzMDtZClNfTfksoQtRXl6Yi1yZMpJ5lEF9AUo6eds4Vom005Qby8A5sWPKpPvGkdhXZ2b9LGI/NAkAGdQxUyqH4eQNJw0YSt5iJ4OhDJyse+eIKKCIaRmzLkE5nzkZMQ0qmOFk58s6wXI+dxjYwomq86iBDxO0aUZ5rqxTj8RsuV5FyKXJeK6TBVKGnZOHEltBfOel7KCYAxNmD8VsPdNLuM95nv+U4MHM6nUUxITd4hYxneoP5p0xmdbmL6l0NCbXvok9hdje6r/kTCcNxWS7IWHvm1yPITK/4vbeNNi3EBcmqB23iOu6Ob8ygIuTsTsz4bLO+bkNuME7zgYnLOtCM2IiPmMscoaPMgiV9YH1yyXsIBo5KYMwmFyXuJcw4WRsbq6C3I0dMyQmnEKxYwKKXfCW+aL865woMpaSewFh/SS0Ud7JLnwRyNyel+c9JrecGR/VS86fXd+VHPvGjuDkP37edKncBfeNA8LpCm1FW6XXUfGMr5xfBt7fIMscPjucfcKAV6UJ6MhJ41nIcF2vOPgeAnrmIuKGCkPa/4MemFs2kRS+poXgxdmoT6BCDOoeriGSvRb7uRfCmntARhEZvZqvVrxov7LT3Xxis5VtUqMeOu+7btCjmnp5N8hF9OG3m4h2VZtqo8gjQ8YX8+Iqa0PazZz32rDh/5dSGmW7xbgYS+dV4a9CEl6PYZU2lUyXIYAmVIwX7svuPtO6drBqkqUDGxiVjjH8QrhBjRuUKQY6mz+tOOMH3IF1blAF9qkYRn8+iLtxHUbuoBrdZjGuoG3HZrykxozttVzvoTrN4Q4mmnTSm+I7aEg+HFR5LORKaoEtxFA2ECPGHmhrUU8kYoOMoN5CUp9qTk0HddlrlPos39pZ0E7lbKTzA7cAZRvb8Zc5Ey3TeZzXv26kNV+yQfWVmieZba1L1oVG8lQ0lItcavsTO3J0Wqlj0eUT/gJNaDbJEpvlkc73m7CThYk6+0UGPKaZznmqkMBTmpc4v8dT1oZsz1jDs4z8MH1dnzVrfKuPw+Z0F8qPY9wwhy9Ax+cRev4+S8fljnHIo3RU7vdZmKt2lycBnbMQ7Q/GA23IKO29OyB/FAGrHTtE/h8VwetntUOHsHF6ryKwnQ6k93DeNJjvtmuw0xOmtybDDct8UbfNOt3qmNzKbVshWH88Utsx/krNg1PazHTTTQso6u+7He1BhmrZOv8AL9891teTBOIAAAAASUVORK5CYII=">
+      
+      <div class="profile-name"><b>Krishna Patidar</b></div>
+    </div>
+
+   
+    <div class="profile-info">
+      <p>Web Designer & JavaScript Enthusiast.<br>
+         Loves clean, creative layouts and good coffee!</p>
+      <div class="buttons">
+        <button>Contact</button>
+        <a href="./Portfolio.html" alt="Portfolio"><button>Portfolio</button></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
